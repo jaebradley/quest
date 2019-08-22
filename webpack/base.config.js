@@ -50,6 +50,7 @@ module.exports = {
       '.jsx',
     ],
     alias: {
+      Src: path.resolve(BASE_DIRECTORY, 'src'),
       Actions: path.resolve(BASE_DIRECTORY, 'src/actions'),
       Client: path.resolve(BASE_DIRECTORY, 'src/client'),
       Components: path.resolve(BASE_DIRECTORY, 'src/components'),
