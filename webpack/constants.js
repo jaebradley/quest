@@ -5,7 +5,7 @@ const OUTPUT_DIRECTORY_NAME = 'build';
 const OUTPUT_DIRECTORY = path.resolve(BASE_DIRECTORY, OUTPUT_DIRECTORY_NAME);
 const SOURCE_DIRECTORY = path.resolve(BASE_DIRECTORY, 'src');
 const INDEX_HTML_PAGE_FILE_PATH = path.resolve(BASE_DIRECTORY, 'public', 'index.html');
-const ENTRY_FILE_PATH = path.resolve(SOURCE_DIRECTORY, 'App.jsx');
+const ENTRY_FILE_PATH = path.resolve(SOURCE_DIRECTORY, 'components/App.jsx');
 
 module.exports = {
   BASE_DIRECTORY,
