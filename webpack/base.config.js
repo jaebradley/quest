@@ -4,6 +4,7 @@ const {
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 const {
   BASE_DIRECTORY,
@@ -57,11 +58,15 @@ module.exports = {
       Containers: path.resolve(BASE_DIRECTORY, 'src/containers'),
       Data: path.resolve(BASE_DIRECTORY, 'src/data'),
       GraphQL: path.resolve(BASE_DIRECTORY, 'src/graphql'),
+      Sagas: path.resolve(BASE_DIRECTORY, 'src/sagas'),
     },
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new Dotenv(),
     new webpack.EnvironmentPlugin([
+      'SERVER_BASE_URL',
+      'GOOGLE_CLIENT_ID',
       'NODE_ENV',
     ]),
     new HtmlWebpackPlugin({
