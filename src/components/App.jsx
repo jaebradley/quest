@@ -13,12 +13,17 @@ import {
   Route,
   Switch,
 } from 'react-router';
+import {
+  ApolloProvider,
+} from 'react-apollo';
 
 import history from 'Src/history';
 import theme from 'Src/theme';
 import store from 'Src/store';
 import start from 'Sagas/start';
+import client from 'Src/client';
 
+import Home from './Home';
 import Login from './Login';
 
 start();
@@ -28,15 +33,22 @@ function App() {
     <Provider store={store}>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
-        <Router history={history}>
-          <Switch>
-            <Route
-              exact
-              path="/login"
-              component={Login}
-            />
-          </Switch>
-        </Router>
+        <ApolloProvider client={client}>
+          <Router history={history}>
+            <Switch>
+              <Route
+                exact
+                path="/"
+                component={Home}
+              />
+              <Route
+                exact
+                path="/login"
+                component={Login}
+              />
+            </Switch>
+          </Router>
+        </ApolloProvider>
       </MuiThemeProvider>
     </Provider>
   );
