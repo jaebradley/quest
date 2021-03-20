@@ -32,7 +32,7 @@
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.2.0",
     "dotenv": "^8.1.0",
-    "graphql": "^14.4.2",
+    "graphql": "^14.7.0",
     "graphql-anywhere": "^4.2.4",
     "graphql-tag": "^2.10.1",
     "history": "^4.9.0",
